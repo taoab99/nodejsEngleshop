@@ -1,0 +1,120 @@
+http://localhost:4000
+
+###
+GET   http://localhost:4000/accout/index
+###
+get http://localhost:4000/accout
+####
+POST  http://localhost:4000/accout/create
+Content-Type: application/json
+
+{
+    "email": "bui khac tao",
+    "password": 12345567
+}
+###
+POST  http://localhost:4000/accout/create
+Content-Type: application/json
+
+{
+    "email": "khactao99@gmail.com",
+    "password": 123456
+}
+
+###
+POST  http://localhost:4000/accout/addtocart
+Content-Type: application/json
+
+{
+    "email": "khactao99@gmail.com",
+    "cart": 
+        {
+            "id": "11",
+            "name": "áo 5 lỗ",
+            "price": 123456
+        }
+}
+###
+POST  http://localhost:4000/accout/loggin
+Content-Type: application/json
+
+{
+    "email": "@
+    .com",
+    "password": 123456
+}
+###
+GET http://localhost:4000/products?page=2&sortName=price&sortType=-1
+
+###
+POST http://localhost:4000/products/create
+Content-Type: application/json
+
+{
+    "name": "vâv",
+    "description": "description",
+    "url": "url",
+    "price": 11,
+    "sale": 0,
+    "avatar":"ảnh.jpg"
+}
+###
+POST  http://localhost:4000/billcart
+Content-Type: application/json
+
+{
+    "email": "khactao99@gmail.com",
+     "password": 123456,
+}
+###
+POST  http://localhost:4000/billcart
+Content-Type: application/json
+
+{
+    "email": "khactao99@gmail.com",
+    "cart": [
+        {
+            "name": "áo sơ mi 1",
+            "description": "mua ở bên bển",
+            "url": "nodejs4x",
+            "price":200000,
+            "sale": 0
+        }
+    ]
+}
+###
+GET http://localhost:4000/billcart
+
+###
+POST  http://localhost:4000/billcart
+Content-Type: application/json
+
+
+{
+    "email": "khactao99@gmail.com",
+    "password": 123456,
+    "cart": [
+        {
+            "name": "áo sơ mi 1",
+            "description": "mua ở bên bển",
+            "url": "nodejs4x",
+            "price":200000,
+            "sale": 0
+        },
+        {
+            "name": "áo sơ mi 2",
+            "description": "mua ở bên mỹ",
+            "url": "nodejs4x",
+            "price":100000,
+            "sale": 0
+        }
+    ]
+}
+
+###
+
+GET   http://localhost:4000/accout/getallcart?email=khactao99@gmail.com
+
+
+###
+GET   http://localhost:4000/products/getproducbycategry?name=quần jean

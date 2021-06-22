@@ -1,6 +1,5 @@
 const path = require('path');
-const express = require('express')
-const morgan = require('morgan');
+const express = require('express');
 const app = express();
 const port = process.env.PORT || 4000;
 
@@ -19,8 +18,6 @@ db.connect();
 // cấu hình static tuyến đường:
 app.use(express.static(path.join(__dirname, 'public')));
 
-// sử dụng morgan 
-app.use(morgan('combined'));
 app.use(cors(
     {
         origin: 'http://localhost:3000',

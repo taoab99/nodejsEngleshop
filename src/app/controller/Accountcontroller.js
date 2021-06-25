@@ -152,6 +152,20 @@ class Accountcontroller {
         });
     }
 
+    async getaccount(req, res, next) {
+        try {
+            await Accounts.find({})
+                .then(kt => {
+                    res.json({ tk: kt });
+                })
+                .catch(next)
+        } catch (error) {
+            console.log('erores', error);
+        }
+
+
+    }
+
 }
 
 module.exports = new Accountcontroller;

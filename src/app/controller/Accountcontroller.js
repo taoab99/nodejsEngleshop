@@ -1,4 +1,4 @@
-const { findOne } = require('../modles/accouts');
+
 const Accounts = require('../modles/accouts');
 
 class Accountcontroller {

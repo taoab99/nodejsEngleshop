@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 async function connect() {
 
     try {
-        await mongoose.connect('mongodb://localhost:27017/DOAN', {
+        await mongoose.connect('mongodb+srv://shopdb:1111111111@cluster0.vtvuo.mongodb.net/shopconnect?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true,

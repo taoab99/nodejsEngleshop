@@ -17,8 +17,8 @@ POST  http://localhost:4000/accout/create
 Content-Type: application/json
 
 {
-    "email": "khactao99@gmail.com",
-    "password": 123456
+    "email": "addmin",
+    "password": "addmin"
 }
 
 ###
@@ -57,58 +57,6 @@ Content-Type: application/json
     "price": 11,
     "sale": 0,
     "avatar":"ảnh.jpg"
-}
-###
-POST  http://localhost:4000/billcart
-Content-Type: application/json
-
-{
-    "email": "khactao99@gmail.com",
-     "password": 123456,
-}
-###
-POST  http://localhost:4000/billcart
-Content-Type: application/json
-
-{
-    "email": "khactao99@gmail.com",
-    "cart": [
-        {
-            "name": "áo sơ mi 1",
-            "description": "mua ở bên bển",
-            "url": "nodejs4x",
-            "price":200000,
-            "sale": 0
-        }
-    ]
-}
-###
-GET http://localhost:4000/billcart
-
-###
-POST  http://localhost:4000/billcart
-Content-Type: application/json
-
-
-{
-    "email": "khactao99@gmail.com",
-    "password": 123456,
-    "cart": [
-        {
-            "name": "áo sơ mi 1",
-            "description": "mua ở bên bển",
-            "url": "nodejs4x",
-            "price":200000,
-            "sale": 0
-        },
-        {
-            "name": "áo sơ mi 2",
-            "description": "mua ở bên mỹ",
-            "url": "nodejs4x",
-            "price":100000,
-            "sale": 0
-        }
-    ]
 }
 
 ###

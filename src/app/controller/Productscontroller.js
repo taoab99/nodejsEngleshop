@@ -74,7 +74,6 @@ class Productscontroller {
 
     async getproducbycategry(req, res, next) {
         var name = req.query.name;
-        console.log(name);
         await Products.find({ category: name })
             .then(products => {
                 res.json({

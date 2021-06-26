@@ -1,5 +1,6 @@
 const port = process.env.PORT || 4000;
 const Products = require('../modles/products');
+const cloundinary = require('../middlewere/cloundinary');
 
 class Productscontroller {
     index(req, res, next) {
@@ -19,7 +20,7 @@ class Productscontroller {
             .catch(next);
     }
 
-    createProduct(req, res, next) {
+    async createProduct(req, res, next) {
         var name = req.body.name;
         var description = req.body.description;
         var category = req.body.category;
@@ -38,10 +39,9 @@ class Productscontroller {
                 sale: sale
             });
             if (req.file) {
-                const servername = require('os').hostname();
                 var path = req.file.path;
-                var x = `http://${servername}:${port}` + path.slice(10);
-                ProductsAdd.url = x;
+                var image_clound = await cloundinary.uploader.upload(path)
+                ProductsAdd.url = image_clound.secure_url;
             }
             ProductsAdd.save()
                 .then(

@@ -2,7 +2,10 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 4000;
+require('dotenv').config();
 
+
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const route = require('./routes/index');
 const db = require('./config/db/index');
@@ -10,6 +13,8 @@ var cors = require('cors');
 
 app.use(express.json());
 app.use(cookieParser("buikhactao"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // connect tới db
 db.connect();
